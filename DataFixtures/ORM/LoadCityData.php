@@ -3945,7 +3945,29 @@ class LoadCityData extends AbstractFixture implements OrderedFixtureInterface
                 ;
             $manager->persist($city);
         
-        $manager->flush();   
+        $city = new City();
+        $city
+                ->setDescription('Chacao')
+                ->setCapital(false)
+                ->setState($this->getReference('State-Distrito-Capital'))
+                ;
+            $manager->persist($city);
+        
+        $city = new City();
+        $city
+                ->setDescription('Baruta')
+                ->setCapital(false)
+                ->setState($this->getReference('State-Distrito-Capital'))
+                ;
+            $manager->persist($city);
+        
+        $city = new City();
+        $city
+                ->setDescription('Sucre')
+                ->setCapital(false)
+                ->setState($this->getReference('State-Distrito-Capital'))
+                ;
+            $manager->persist($city);
             
         $city = new City();
         $city
@@ -4042,6 +4064,8 @@ class LoadCityData extends AbstractFixture implements OrderedFixtureInterface
                 ->setState($this->getReference('State-Dependencias-Federales'))
                 ;
             $manager->persist($city);
+            
+        $manager->flush();
     }
 
     public function getOrder() {
