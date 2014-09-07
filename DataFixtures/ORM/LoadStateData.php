@@ -20,6 +20,7 @@ use Tecnocreaciones\Vzla\EntityBundle\Entity\State;
  * Data de los estados
  *
  * @see https://github.com/marydn/venezuela-sql/blob/master/venezuela.sql
+ * @see httpshttps://github.com/joserafael/venezuela/blob/master/Config/Schema/venezuela.sql
  * @author Carlos Mendoza <inhack20@tecnocreaciones.com>
  */
 class StateFixture extends AbstractFixture implements OrderedFixtureInterface
