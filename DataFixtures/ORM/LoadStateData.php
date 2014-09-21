@@ -242,7 +242,7 @@ class StateFixture extends AbstractFixture implements OrderedFixtureInterface
                   ->setRegion($this->getReference('Region-Capital'))
                   ->setCountry($countryVe); 
                 $manager->persist($state);
-            $this->addReference('State-Distrito-Capital', $state);
+            $this->addReference('State-Distrito-Capital-dc', $state);
 
             $state = new State();
             
