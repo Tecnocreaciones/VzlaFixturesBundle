@@ -203,8 +203,6 @@ class LoadParishData extends AbstractFixture implements OrderedFixtureInterface
                     $this->addReference("Parish-23-De-Enero-dc", $parish);
                 $manager->persist($parish);  
                 
-                
-                
             //parroquias del estado amazonas    
                 
             $parish = new Parish();
@@ -433,7 +431,7 @@ class LoadParishData extends AbstractFixture implements OrderedFixtureInterface
                     ->setState($this->getReference("State-Amazonas"))
                     ;
                     $this->addReference("Parish-Pahueña-ama", $parish);
-                $manager->persist($parish);          
+                $manager->persist($parish);
                 
             $parish = new Parish();
             $parish->setDescription('Platanillal')
@@ -596,7 +594,7 @@ class LoadParishData extends AbstractFixture implements OrderedFixtureInterface
                     ->setState($this->getReference("State-Anzoategui"))
                     ;
                     $this->addReference("Parish-Lechería-anz", $parish);
-                $manager->persist($parish);       
+                $manager->persist($parish);
                 
             $parish = new Parish();
             $parish->setDescription('El Morro')
@@ -604,8 +602,8 @@ class LoadParishData extends AbstractFixture implements OrderedFixtureInterface
                     ->setState($this->getReference("State-Anzoategui"))
                     ;
                     $this->addReference("Parish-El-Morro-anz", $parish);
-                $manager->persist($parish);      
-                
+                $manager->persist($parish);
+
             $parish = new Parish();
             $parish->setDescription('Cantaura')
                     ->setMunicipality($this->getReference('Municipality-Freites-anz'))
@@ -620,7 +618,7 @@ class LoadParishData extends AbstractFixture implements OrderedFixtureInterface
                     ->setState($this->getReference("State-Anzoategui"))
                     ;
                     $this->addReference("Parish-Libertador-anz", $parish);
-                $manager->persist($parish);       
+                $manager->persist($parish);
                 
             $parish = new Parish();
             $parish->setDescription('Santa Rosa')
@@ -636,7 +634,7 @@ class LoadParishData extends AbstractFixture implements OrderedFixtureInterface
                     ->setState($this->getReference("State-Anzoategui"))
                     ;
                     $this->addReference("Parish-Úrica-anz", $parish);
-                $manager->persist($parish);     
+                $manager->persist($parish);
                 
             $parish = new Parish();
             $parish->setDescription('Guanta')
@@ -2968,7 +2966,7 @@ class LoadParishData extends AbstractFixture implements OrderedFixtureInterface
                     ->setState($this->getReference("State-Cojedes"))
                     ;
                     $this->addReference("Parish-Juan-Angel-Bravo-coj", $parish);
-                $manager->persist($parish);   
+                $manager->persist($parish);
                 
                 
             $parish = new Parish();
@@ -9852,7 +9850,7 @@ class LoadParishData extends AbstractFixture implements OrderedFixtureInterface
                     $this->addReference("Parish-Raúl-Cuenca-zul", $parish);
                 $manager->persist($parish);
                 
-                $manager->flush();
+        $manager->flush();
        
     }
     

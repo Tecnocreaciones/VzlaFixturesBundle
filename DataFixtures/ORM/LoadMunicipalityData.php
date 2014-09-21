@@ -171,7 +171,8 @@ class LoadMunicipalityData extends AbstractFixture implements OrderedFixtureInte
                 ->setDescription('Freites')
                 ->setState($this->getReference("State-Anzoategui"));
                 $this->addReference('Municipality-Freites-anz', $municipality);
-        
+        $manager->persist($municipality);
+            
         $municipality = new Municipality();
         $municipality
                 ->setDescription('Piritu')
@@ -698,8 +699,9 @@ class LoadMunicipalityData extends AbstractFixture implements OrderedFixtureInte
                 ->setDescription('Pao de San Juan Bautista')
                 ->setState($this->getReference("State-Cojedes"));
                 $this->addReference('Municipality-Pao-de-San-Juan-Bautista-coj', $municipality); 
-        $municipality = new Municipality();
+        $manager->persist($municipality);
         
+        $municipality = new Municipality();
         $municipality
                 ->setDescription('Ricaurte')
                 ->setState($this->getReference("State-Cojedes"));
@@ -2407,88 +2409,7 @@ class LoadMunicipalityData extends AbstractFixture implements OrderedFixtureInte
                 $this->addReference('Municipality-Dependencias-Federales-dp', $municipality);
         $manager->persist($municipality);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
-
-
-
-
-
-
-
-
-
-
-
-
-            
-
-            
-              
-            
-            
-            
-           
-           
-                
-           
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-            
-           
-            
-           
-            
-          
-            
-           
-            
-            
-           
-            
-            
-            
-            
-           
-            
-            
-           
-        
+        $manager->flush();
     }
     public function getOrder() {
         return 3;
