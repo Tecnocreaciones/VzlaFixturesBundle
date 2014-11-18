@@ -35,49 +35,49 @@ class LoadMunicipalityData extends AbstractFixture implements OrderedFixtureInte
         
         $municipality = new Municipality();
         $municipality
-                ->setDescription('Autonomo alto orinoco')
+                ->setDescription('Alto orinoco')
                 ->setState($this->getReference("State-Amazonas"));
                 $this->addReference('Municipality-autonomo-alto-orinoco-ama', $municipality);
         $manager->persist($municipality);
         
         $municipality = new Municipality();
         $municipality
-                ->setDescription('Autonomo atabapo')
+                ->setDescription('Atabapo')
                 ->setState($this->getReference("State-Amazonas"));
                 $this->addReference('Municipality-Autonomo-atabapo-ama', $municipality);
         $manager->persist($municipality);
         
         $municipality = new Municipality();
         $municipality
-                ->setDescription('Autonomo atures')
+                ->setDescription('Atures')
                 ->setState($this->getReference("State-Amazonas"));
                 $this->addReference('Municipality-Autonomo-atures-ama', $municipality);
         $manager->persist($municipality);
         
         $municipality = new Municipality();
         $municipality
-                ->setDescription('Autonomo autana')
+                ->setDescription('Autana')
                 ->setState($this->getReference("State-Amazonas"));
                 $this->addReference('Municipality-Autonomo-autana-ama', $municipality);
         $manager->persist($municipality);
         
         $municipality = new Municipality();
         $municipality
-                ->setDescription('Autonomo maroa')
+                ->setDescription('Maroa')
                 ->setState($this->getReference("State-Amazonas"));
                 $this->addReference('Municipality-Autonomo-maroa-ama', $municipality);
         $manager->persist($municipality);
         
         $municipality = new Municipality();
         $municipality
-                ->setDescription('Autonomo manapiare')
+                ->setDescription('Manapiare')
                 ->setState($this->getReference("State-Amazonas"));
                 $this->addReference('Municipality-Autonomo-manapiare-ama', $municipality);
         $manager->persist($municipality);
         
         $municipality = new Municipality();
         $municipality
-                ->setDescription('Autonomo rio negro')
+                ->setDescription('Rio negro')
                 ->setState($this->getReference("State-Amazonas"));
                 $this->addReference('Municipality-Autonomo-rio-negro-ama', $municipality);
         $manager->persist($municipality);
