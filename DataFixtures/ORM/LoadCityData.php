@@ -32,246 +32,31 @@ class LoadCityData extends AbstractFixture implements OrderedFixtureInterface
                 ->setCapital(false)
                 ->setState($this->getReference('State-Distrito-Capital-dc'))
                 ->setMunicipality($this->getReference('Municipality-Libertador-dc'))
-                ->setParish($this->getReference('Parish-Altagracia-dc'))
+                ->addParish($this->getReference('Parish-Altagracia-dc'))
+                ->addParish($this->getReference('Parish-Antimano-dc'))
+                ->addParish($this->getReference('Parish-Candelaria-dc'))
+                ->addParish($this->getReference('Parish-Caricuao-dc'))
+                ->addParish($this->getReference('Parish-Catedral-dc'))
+                ->addParish($this->getReference('Parish-Coche-dc'))
+                ->addParish($this->getReference('Parish-El-Junquito-dc'))
+                ->addParish($this->getReference('Parish-El-Paraiso-dc'))
+                ->addParish($this->getReference('Parish-El-Recreo-dc'))
+                ->addParish($this->getReference('Parish-El-valle-dc'))
+                ->addParish($this->getReference('Parish-La-Pastora-dc'))
+                ->addParish($this->getReference('Parish-La-Vega-dc'))
+                ->addParish($this->getReference('Parish-Macarao-dc'))
+                ->addParish($this->getReference('Parish-San-Agustin-dc'))
+                ->addParish($this->getReference('Parish-San-Bernardino-dc'))
+                ->addParish($this->getReference('Parish-San-Jose-dc'))
+                ->addParish($this->getReference('Parish-San-Juan-dc'))
+                ->addParish($this->getReference('Parish-San-Pedro-dc'))
+                ->addParish($this->getReference('Parish-Santa-Rosalia-dc'))
+                ->addParish($this->getReference('Parish-Santa-Teresa-dc'))
+                ->addParish($this->getReference('Parish-Sucre-dc'))
+                ->addParish($this->getReference('Parish-23-De-Enero-dc'))
                 ;
                 $this->addReference("City-Caracas-alt-dc", $city);
                 $manager->persist($city);
-                
-        $city = new City();
-        $city
-                ->setDescription('Caracas')
-                ->setCapital(false)
-                ->setState($this->getReference('State-Distrito-Capital-dc'))
-                ->setMunicipality($this->getReference('Municipality-Libertador-dc'))
-                ->setParish($this->getReference('Parish-Antimano-dc'))
-                ;
-                $this->addReference("City-Caracas-ant-dc", $city);
-                $manager->persist($city);
-                
-        $city = new City();
-        $city
-                ->setDescription('Caracas')
-                ->setCapital(false)
-                ->setState($this->getReference('State-Distrito-Capital-dc'))
-                ->setMunicipality($this->getReference('Municipality-Libertador-dc'))
-                ->setParish($this->getReference('Parish-Candelaria-dc'))
-                ;
-                $this->addReference("City-Caracas-can-dc", $city);
-                $manager->persist($city);                
-        
-        $city = new City();
-        $city
-                ->setDescription('Caracas')
-                ->setCapital(false)
-                ->setState($this->getReference('State-Distrito-Capital-dc'))
-                ->setMunicipality($this->getReference('Municipality-Libertador-dc'))
-                ->setParish($this->getReference('Parish-Caricuao-dc'))
-                ;
-                $this->addReference("City-Caracas-car-dc", $city);
-                $manager->persist($city);         
-        
-        $city = new City();
-        $city
-                ->setDescription('Caracas')
-                ->setCapital(false)
-                ->setState($this->getReference('State-Distrito-Capital-dc'))
-                ->setMunicipality($this->getReference('Municipality-Libertador-dc'))
-                ->setParish($this->getReference('Parish-Catedral-dc'))
-                ;
-                $this->addReference("City-Caracas-cat-dc", $city);
-                $manager->persist($city);
-                
-        $city = new City();
-        $city
-                ->setDescription('Caracas')
-                ->setCapital(false)
-                ->setState($this->getReference('State-Distrito-Capital-dc'))
-                ->setMunicipality($this->getReference('Municipality-Libertador-dc'))
-                ->setParish($this->getReference('Parish-Coche-dc'))
-                ;
-                $this->addReference("City-Caracas-coc-dc", $city);
-                $manager->persist($city);
-                        
-        $city = new City();
-        $city
-                ->setDescription('Caracas')
-                ->setCapital(false)
-                ->setState($this->getReference('State-Distrito-Capital-dc'))
-                ->setMunicipality($this->getReference('Municipality-Libertador-dc'))
-                ->setParish($this->getReference('Parish-El-Junquito-dc'))
-                ;
-                $this->addReference("City-Caracas-jun-dc", $city);
-                $manager->persist($city);        
-        
-        $city = new City();
-        $city
-                ->setDescription('Caracas')
-                ->setCapital(false)
-                ->setState($this->getReference('State-Distrito-Capital-dc'))
-                ->setMunicipality($this->getReference('Municipality-Libertador-dc'))
-                ->setParish($this->getReference('Parish-El-Paraiso-dc'))
-                ;
-                $this->addReference("City-Caracas-ep-dc", $city);
-                $manager->persist($city);   
-                
-        $city = new City();
-        $city
-                ->setDescription('Caracas')
-                ->setCapital(false)
-                ->setState($this->getReference('State-Distrito-Capital-dc'))
-                ->setMunicipality($this->getReference('Municipality-Libertador-dc'))
-                ->setParish($this->getReference('Parish-El-Recreo-dc'))
-                ;
-                $this->addReference("City-Caracas-er-dc", $city);
-                $manager->persist($city);   
-                
-        $city = new City();
-        $city
-                ->setDescription('Caracas')
-                ->setCapital(false)
-                ->setState($this->getReference('State-Distrito-Capital-dc'))
-                ->setMunicipality($this->getReference('Municipality-Libertador-dc'))
-                ->setParish($this->getReference('Parish-El-valle-dc'))
-                ;
-                $this->addReference("City-Caracas-ev-dc", $city);
-                $manager->persist($city);        
-                
-        $city = new City();
-        $city
-                ->setDescription('Caracas')
-                ->setCapital(false)
-                ->setState($this->getReference('State-Distrito-Capital-dc'))
-                ->setMunicipality($this->getReference('Municipality-Libertador-dc'))
-                ->setParish($this->getReference('Parish-La-Pastora-dc'))
-                ;
-                $this->addReference("City-Caracas-lp-dc", $city);
-                $manager->persist($city);          
-                
-                
-        $city = new City();
-        $city
-                ->setDescription('Caracas')
-                ->setCapital(false)
-                ->setState($this->getReference('State-Distrito-Capital-dc'))
-                ->setMunicipality($this->getReference('Municipality-Libertador-dc'))
-                ->setParish($this->getReference('Parish-La-Vega-dc'))
-                ;
-                $this->addReference("City-Caracas-lv-dc", $city);
-                $manager->persist($city);               
-                
-        $city = new City();
-        $city
-                ->setDescription('Caracas')
-                ->setCapital(false)
-                ->setState($this->getReference('State-Distrito-Capital-dc'))
-                ->setMunicipality($this->getReference('Municipality-Libertador-dc'))
-                ->setParish($this->getReference('Parish-Macarao-dc'))
-                ;
-                $this->addReference("City-Caracas-mac-dc", $city);
-                $manager->persist($city);         
-                
-        $city = new City();
-        $city
-                ->setDescription('Caracas')
-                ->setCapital(false)
-                ->setState($this->getReference('State-Distrito-Capital-dc'))
-                ->setMunicipality($this->getReference('Municipality-Libertador-dc'))
-                ->setParish($this->getReference('Parish-San-Agustin-dc'))
-                ;
-                $this->addReference("City-Caracas-sa-dc", $city);
-                $manager->persist($city);            
-                
-                
-        $city = new City();
-        $city
-                ->setDescription('Caracas')
-                ->setCapital(false)
-                ->setState($this->getReference('State-Distrito-Capital-dc'))
-                ->setMunicipality($this->getReference('Municipality-Libertador-dc'))
-                ->setParish($this->getReference('Parish-San-Bernardino-dc'))
-                ;
-                $this->addReference("City-Caracas-sb-dc", $city);
-                $manager->persist($city);                
-                
-        $city = new City();
-        $city
-                ->setDescription('Caracas')
-                ->setCapital(false)
-                ->setState($this->getReference('State-Distrito-Capital-dc'))
-                ->setMunicipality($this->getReference('Municipality-Libertador-dc'))
-                ->setParish($this->getReference('Parish-San-Jose-dc'))
-                ;
-                $this->addReference("City-Caracas-sj-dc", $city);
-                $manager->persist($city);                
-                
-        $city = new City();
-        $city
-                ->setDescription('Caracas')
-                ->setCapital(false)
-                ->setState($this->getReference('State-Distrito-Capital-dc'))
-                ->setMunicipality($this->getReference('Municipality-Libertador-dc'))
-                ->setParish($this->getReference('Parish-San-Juan-dc'))
-                ;
-                $this->addReference("City-Caracas-sju-dc", $city);
-                $manager->persist($city); 
-                
-        $city = new City();
-        $city
-                ->setDescription('Caracas')
-                ->setCapital(false)
-                ->setState($this->getReference('State-Distrito-Capital-dc'))
-                ->setMunicipality($this->getReference('Municipality-Libertador-dc'))
-                ->setParish($this->getReference('Parish-San-Pedro-dc'))
-                ;
-                $this->addReference("City-Caracas-spe-dc", $city);
-                $manager->persist($city);          
-        
-        $city = new City();
-        $city
-                ->setDescription('Caracas')
-                ->setCapital(false)
-                ->setState($this->getReference('State-Distrito-Capital-dc'))
-                ->setMunicipality($this->getReference('Municipality-Libertador-dc'))
-                ->setParish($this->getReference('Parish-Santa-Rosalia-dc'))
-                ;
-                $this->addReference("City-Caracas-sr-dc", $city);
-                $manager->persist($city);          
-                
-                
-        $city = new City();
-        $city
-                ->setDescription('Caracas')
-                ->setCapital(false)
-                ->setState($this->getReference('State-Distrito-Capital-dc'))
-                ->setMunicipality($this->getReference('Municipality-Libertador-dc'))
-                ->setParish($this->getReference('Parish-Santa-Teresa-dc'))
-                ;
-                $this->addReference("City-Caracas-st-dc", $city);
-                $manager->persist($city);          
-                
-        $city = new City();
-        $city
-                ->setDescription('Caracas')
-                ->setCapital(false)
-                ->setState($this->getReference('State-Distrito-Capital-dc'))
-                ->setMunicipality($this->getReference('Municipality-Libertador-dc'))
-                ->setParish($this->getReference('Parish-Sucre-dc'))
-                ;
-                $this->addReference("City-Caracas-su-dc", $city);
-                $manager->persist($city);          
-                
-        $city = new City();
-        $city
-                ->setDescription('Caracas')
-                ->setCapital(false)
-                ->setState($this->getReference('State-Distrito-Capital-dc'))
-                ->setMunicipality($this->getReference('Municipality-Libertador-dc'))
-                ->setParish($this->getReference('Parish-23-De-Enero-dc'))
-                ;
-                $this->addReference("City-Caracas-23-dc", $city);
-                $manager->persist($city);                    
-                
-                
                 
         //ciudadades de amazonas
                 
