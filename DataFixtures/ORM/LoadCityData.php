@@ -166,24 +166,15 @@ class LoadCityData extends AbstractFixture implements OrderedFixtureInterface
                 $manager->persist($city);            
                 
                 
+                      
         $city = new City();
         $city
                 ->setDescription('Puerto Ayacucho')
                 ->setCapital(false)
                 ->setState($this->getReference('State-Amazonas'))
                 ->setMunicipality($this->getReference('Municipality-Autonomo-atures-ama'))
-                ->setParish($this->getReference('Parish-Fernando-Girón-Tovar-ama'))
-                ;
-                $this->addReference("City-Puerto-Ayacucho-ama", $city);
-                $manager->persist($city);         
-                
-        $city = new City();
-        $city
-                ->setDescription('Puerto Ayacucho')
-                ->setCapital(false)
-                ->setState($this->getReference('State-Amazonas'))
-                ->setMunicipality($this->getReference('Municipality-Autonomo-atures-ama'))
-                ->setParish($this->getReference('Parish-Luis-Alberto-Gómez-ama'))
+                ->addParish($this->getReference('Parish-Luis-Alberto-Gómez-ama'))
+                ->addParish($this->getReference('Parish-Fernando-Girón-Tovar-ama'))
                 ;
                 $this->addReference("City-Puerto-Ayacucho-lag-ama", $city);
                 $manager->persist($city);         
@@ -1424,87 +1415,20 @@ class LoadCityData extends AbstractFixture implements OrderedFixtureInterface
                 ->setCapital(false)
                 ->setState($this->getReference('State-Aragua'))
                 ->setMunicipality($this->getReference('Municipality-Girardot-ara'))
-                ->setParish($this->getReference('Parish-Las-Delicias-ara'))
+                ->addParish($this->getReference('Parish-Las-Delicias-ara'))
+                ->addParish($this->getReference('Parish-San-José-ara'))
+                ->addParish($this->getReference('Parish-Joaquín-Crespo-ara'))
+                ->addParish($this->getReference('Parish-Pedro-José-Ovalles-ara'))
+                ->addParish($this->getReference('Parish-José-Casanova-Godoy-ara'))
+                ->addParish($this->getReference('Parish-Andrés-Eloy-Blanco-ara'))
+                ->addParish($this->getReference('Parish-Los-Tacariguas-ara'))
+                ->addParish($this->getReference('Parish-Los-Tacariguas-ara'))
+         
+               
                 ;
                 $this->addReference("City-Maracay-ld-ara", $city);
                 $manager->persist($city);           
-                        
-                
-        $city = new City();
-        $city
-                ->setDescription('Maracay')
-                ->setCapital(false)
-                ->setState($this->getReference('State-Aragua'))
-                ->setMunicipality($this->getReference('Municipality-Girardot-ara'))
-                ->setParish($this->getReference('Parish-San-José-ara'))
-                ;
-                $this->addReference("City-Maracay-sj-ld-ara", $city);
-                $manager->persist($city);                   
-                
-                
-        $city = new City();
-        $city
-                ->setDescription('Maracay')
-                ->setCapital(false)
-                ->setState($this->getReference('State-Aragua'))
-                ->setMunicipality($this->getReference('Municipality-Girardot-ara'))
-                ->setParish($this->getReference('Parish-Joaquín-Crespo-ara'))
-                ;
-                $this->addReference("City-Maracay-jc-ld-ara", $city);
-                $manager->persist($city);                   
-                
-                
-                
-        $city = new City();
-        $city
-                ->setDescription('Maracay')
-                ->setCapital(false)
-                ->setState($this->getReference('State-Aragua'))
-                ->setMunicipality($this->getReference('Municipality-Girardot-ara'))
-                ->setParish($this->getReference('Parish-Pedro-José-Ovalles-ara'))
-                ;
-                $this->addReference("City-Maracay-po-ara", $city);
-                $manager->persist($city);          
-                
-                
-        $city = new City();
-        $city
-                ->setDescription('Maracay')
-                ->setCapital(false)
-                ->setState($this->getReference('State-Aragua'))
-                ->setMunicipality($this->getReference('Municipality-Girardot-ara'))
-                ->setParish($this->getReference('Parish-José-Casanova-Godoy-ara'))
-                ;
-                $this->addReference("City-Maracay-jg-ara", $city);
-                $manager->persist($city);          
-                        
-                
-                
-        $city = new City();
-        $city
-                ->setDescription('Maracay')
-                ->setCapital(false)
-                ->setState($this->getReference('State-Aragua'))
-                ->setMunicipality($this->getReference('Municipality-Girardot-ara'))
-                ->setParish($this->getReference('Parish-Andrés-Eloy-Blanco-ara'))
-                ;
-                $this->addReference("City-Maracay-ab-ara", $city);
-                $manager->persist($city);          
-                                
-                
-                
-        $city = new City();
-        $city
-                ->setDescription('Maracay')
-                ->setCapital(false)
-                ->setState($this->getReference('State-Aragua'))
-                ->setMunicipality($this->getReference('Municipality-Girardot-ara'))
-                ->setParish($this->getReference('Parish-Los-Tacariguas-ara'))
-                ;
-                $this->addReference("City-Maracay-lt-ara", $city);
-                $manager->persist($city);             
-                
-                
+                                     
                 
         $city = new City();
         $city
@@ -2090,17 +2014,7 @@ class LoadCityData extends AbstractFixture implements OrderedFixtureInterface
                 $manager->persist($city);            
                 
                 
-        $city = new City();
-        $city
-                ->setDescription('Barinas')
-                ->setCapital(false)
-                ->setState($this->getReference('State-Barinas'))
-                ->setMunicipality($this->getReference('Municipality-Barinas-bar'))
-                ->setParish($this->getReference('Parish-Barinas-bar'))
-                ;
-                $this->addReference("City-Barinas-bar", $city);
-                $manager->persist($city);         
-                
+        
                 
         $city = new City();
         $city
@@ -2155,65 +2069,24 @@ class LoadCityData extends AbstractFixture implements OrderedFixtureInterface
                 ->setParish($this->getReference('Parish-Torunos-bar'))
                 ;
                 $this->addReference("City-Torunos-bar", $city);
+                $manager->persist($city);   
+                $city = new City();
+        $city
+                ->setDescription('Barinas')
+                ->setCapital(false)
+                ->setState($this->getReference('State-Barinas'))
+                ->setMunicipality($this->getReference('Municipality-Barinas-bar'))
+                ->addParish($this->getReference('Parish-Barinas-bar'))
+                ->addParish($this->getReference('Parish-EL-Carmen-bar'))
+                ->addParish($this->getReference('Parish-Rómulo-Betancourt-bar'))
+                ->addParish($this->getReference('Parish-Corazón-de-Jesús-bar'))
+                ->addParish($this->getReference('Parish-Ramón-Ignacio-Méndez-bar'))
+                ->addParish($this->getReference('Parish-Alto-Barinas-bar'))
+               
+                ;
+                $this->addReference("City-Barinas-bar", $city);
                 $manager->persist($city);         
-                
-        $city = new City();
-        $city
-                ->setDescription('Barinas')
-                ->setCapital(false)
-                ->setState($this->getReference('State-Barinas'))
-                ->setMunicipality($this->getReference('Municipality-Barinas-bar'))
-                ->setParish($this->getReference('Parish-EL-Carmen-bar'))
-                ;
-                $this->addReference("City-Barinas-ec-bar", $city);
-                $manager->persist($city);                 
-                
-                
-        $city = new City();
-        $city
-                ->setDescription('Barinas')
-                ->setCapital(false)
-                ->setState($this->getReference('State-Barinas'))
-                ->setMunicipality($this->getReference('Municipality-Barinas-bar'))
-                ->setParish($this->getReference('Parish-Rómulo-Betancourt-bar'))
-                ;
-                $this->addReference("City-Barinas-rg-bar", $city);
-                $manager->persist($city);           
-                
-        $city = new City();
-        $city
-                ->setDescription('Barinas')
-                ->setCapital(false)
-                ->setState($this->getReference('State-Barinas'))
-                ->setMunicipality($this->getReference('Municipality-Barinas-bar'))
-                ->setParish($this->getReference('Parish-Corazón-de-Jesús-bar'))
-                ;
-                $this->addReference("City-Barinas-cj-bar", $city);
-                $manager->persist($city);           
-                
-        $city = new City();
-        $city
-                ->setDescription('Barinas')
-                ->setCapital(false)
-                ->setState($this->getReference('State-Barinas'))
-                ->setMunicipality($this->getReference('Municipality-Barinas-bar'))
-                ->setParish($this->getReference('Parish-Ramón-Ignacio-Méndez-bar'))
-                ;
-                $this->addReference("City-Barinas-rim-bar", $city);
-                $manager->persist($city);           
-                               
-                
-        $city = new City();
-        $city
-                ->setDescription('Barinas')
-                ->setCapital(false)
-                ->setState($this->getReference('State-Barinas'))
-                ->setMunicipality($this->getReference('Municipality-Barinas-bar'))
-                ->setParish($this->getReference('Parish-Alto-Barinas-bar'))
-                ;
-                $this->addReference("City-Barinas-ab-bar", $city);
-                $manager->persist($city);         
-                
+                   
                 
         $city = new City();
         $city
@@ -2624,82 +2497,18 @@ class LoadCityData extends AbstractFixture implements OrderedFixtureInterface
                 ->setCapital(false)
                 ->setState($this->getReference('State-Bolivar'))
                 ->setMunicipality($this->getReference('Municipality-Caroni-bol'))
-                ->setParish($this->getReference('Parish-Cachamay-bol'))
+                ->addParish($this->getReference('Parish-Cachamay-bol'))
+                ->addParish($this->getReference('Parish-Chirica-bol'))
+                ->addParish($this->getReference('Parish-Once-de-Abril-bol'))
+                ->addParish($this->getReference('Parish-Simón-Bolívar-bol'))
+                ->addParish($this->getReference('Parish-Unare-bol'))
+                ->addParish($this->getReference('Parish-Universidad-bol'))
+                ->addParish($this->getReference('Parish-Vista-al-Sol-bol'))
+                
                 ;
                 $this->addReference("City-Ciudad-Guayana-bol", $city);
                 $manager->persist($city);              
-                
-                
-        $city = new City();
-        $city
-                ->setDescription('Ciudad Guayana')
-                ->setCapital(false)
-                ->setState($this->getReference('State-Bolivar'))
-                ->setMunicipality($this->getReference('Municipality-Caroni-bol'))
-                ->setParish($this->getReference('Parish-Chirica-bol'))
-                ;
-                $this->addReference("City-Ciudad-Guayana-ch-bol", $city);
-                $manager->persist($city);              
-                        
-                
-        $city = new City();
-        $city
-                ->setDescription('Ciudad Guayana')
-                ->setCapital(false)
-                ->setState($this->getReference('State-Bolivar'))
-                ->setMunicipality($this->getReference('Municipality-Caroni-bol'))
-                ->setParish($this->getReference('Parish-Once-de-Abril-bol'))
-                ;
-                $this->addReference("City-Ciudad-Guayana-oa-bol", $city);
-                $manager->persist($city);          
-                
-                
-        $city = new City();
-        $city
-                ->setDescription('Ciudad Guayana')
-                ->setCapital(false)
-                ->setState($this->getReference('State-Bolivar'))
-                ->setMunicipality($this->getReference('Municipality-Caroni-bol'))
-                ->setParish($this->getReference('Parish-Simón-Bolívar-bol'))
-                ;
-                $this->addReference("City-Ciudad-Guayana-sb-bol", $city);
-                $manager->persist($city);          
-                
-                
-        $city = new City();
-        $city
-                ->setDescription('Ciudad Guayana')
-                ->setCapital(false)
-                ->setState($this->getReference('State-Bolivar'))
-                ->setMunicipality($this->getReference('Municipality-Caroni-bol'))
-                ->setParish($this->getReference('Parish-Unare-bol'))
-                ;
-                $this->addReference("City-Ciudad-Guayana-un-bol", $city);
-                $manager->persist($city);                         
-                
-                
-        $city = new City();
-        $city
-                ->setDescription('Ciudad Guayana')
-                ->setCapital(false)
-                ->setState($this->getReference('State-Bolivar'))
-                ->setMunicipality($this->getReference('Municipality-Caroni-bol'))
-                ->setParish($this->getReference('Parish-Universidad-bol'))
-                ;
-                $this->addReference("City-Ciudad-Guayana-uv-bol", $city);
-                $manager->persist($city);          
-                
-                
-        $city = new City();
-        $city
-                ->setDescription('Ciudad Guayana')
-                ->setCapital(false)
-                ->setState($this->getReference('State-Bolivar'))
-                ->setMunicipality($this->getReference('Municipality-Caroni-bol'))
-                ->setParish($this->getReference('Parish-Vista-al-Sol-bol'))
-                ;
-                $this->addReference("City-Ciudad-Guayana-vs-bol", $city);
-                $manager->persist($city);              
+           
                 
                 
         $city = new City();
@@ -2855,71 +2664,18 @@ class LoadCityData extends AbstractFixture implements OrderedFixtureInterface
                 ->setCapital(false)
                 ->setState($this->getReference('State-Bolivar'))
                 ->setMunicipality($this->getReference('Municipality-Heres-bol'))
-                ->setParish($this->getReference('Parish-Agua-Salada-bol'))
+                ->addParish($this->getReference('Parish-Agua-Salada-bol'))
+                ->addParish($this->getReference('Parish-Catedral-bol'))
+                ->addParish($this->getReference('Parish-José-Antonio-Páez-bol'))
+                ->addParish($this->getReference('Parish-La-Sabanita-bol'))
+                ->addParish($this->getReference('Parish-Marhuanta-bol'))
+                ->addParish($this->getReference('Parish-Vista-Hermosa-bol'))
+               
                 ;
                 $this->addReference("City-Ciudad-Bolívar-bol", $city);
                 $manager->persist($city);        
                 
-                        
-                
-        $city = new City();
-        $city
-                ->setDescription('Ciudad Bolívar')
-                ->setCapital(false)
-                ->setState($this->getReference('State-Bolivar'))
-                ->setMunicipality($this->getReference('Municipality-Heres-bol'))
-                ->setParish($this->getReference('Parish-Catedral-bol'))
-                ;
-                $this->addReference("City-Ciudad-Bolívar-ct-bol", $city);
-                $manager->persist($city);                
-                
-                
-        $city = new City();
-        $city
-                ->setDescription('Ciudad Bolívar')
-                ->setCapital(false)
-                ->setState($this->getReference('State-Bolivar'))
-                ->setMunicipality($this->getReference('Municipality-Heres-bol'))
-                ->setParish($this->getReference('Parish-José-Antonio-Páez-bol'))
-                ;
-                $this->addReference("City-Ciudad-Bolívar-jp-bol", $city);
-                $manager->persist($city);                
-                
-                        
-        $city = new City();
-        $city
-                ->setDescription('Ciudad Bolívar')
-                ->setCapital(false)
-                ->setState($this->getReference('State-Bolivar'))
-                ->setMunicipality($this->getReference('Municipality-Heres-bol'))
-                ->setParish($this->getReference('Parish-La-Sabanita-bol'))
-                ;
-                $this->addReference("City-Ciudad-Bolívar-ls-bol", $city);
-                $manager->persist($city);                
-                        
-                
-        $city = new City();
-        $city
-                ->setDescription('Ciudad Bolívar')
-                ->setCapital(false)
-                ->setState($this->getReference('State-Bolivar'))
-                ->setMunicipality($this->getReference('Municipality-Heres-bol'))
-                ->setParish($this->getReference('Parish-Marhuanta-bol'))
-                ;
-                $this->addReference("City-Ciudad-Bolívar-mh-bol", $city);
-                $manager->persist($city);               
-                
-        $city = new City();
-        $city
-                ->setDescription('Ciudad Bolívar')
-                ->setCapital(false)
-                ->setState($this->getReference('State-Bolivar'))
-                ->setMunicipality($this->getReference('Municipality-Heres-bol'))
-                ->setParish($this->getReference('Parish-Vista-Hermosa-bol'))
-                ;
-                $this->addReference("City-Ciudad-Bolívar-vh-bol", $city);
-                $manager->persist($city);        
-                
+                    
         $city = new City();
         $city
                 ->setDescription('Almacén')
@@ -3255,22 +3011,13 @@ class LoadCityData extends AbstractFixture implements OrderedFixtureInterface
                 ->setCapital(false)
                 ->setState($this->getReference('State-Carabobo'))
                 ->setMunicipality($this->getReference('Municipality-Diego-Ibarra-car'))
-                ->setParish($this->getReference('Parish-Mariara-car'))
+                ->addParish($this->getReference('Parish-Mariara-car'))
+                ->addParish($this->getReference('Parish-Aguas-Calientes-car'))
+                
                 ;
                 $this->addReference("City-Mariara-car", $city);
                 $manager->persist($city);            
-                
-                
-        $city = new City();
-        $city
-                ->setDescription('Mariara')
-                ->setCapital(false)
-                ->setState($this->getReference('State-Carabobo'))
-                ->setMunicipality($this->getReference('Municipality-Diego-Ibarra-car'))
-                ->setParish($this->getReference('Parish-Aguas-Calientes-car'))
-                ;
-                $this->addReference("City-Mariara-ac-car", $city);
-                $manager->persist($city);            
+               
                         
                 
                 
@@ -3280,23 +3027,13 @@ class LoadCityData extends AbstractFixture implements OrderedFixtureInterface
                 ->setCapital(false)
                 ->setState($this->getReference('State-Carabobo'))
                 ->setMunicipality($this->getReference('Municipality-Guacara-car'))
-                ->setParish($this->getReference('Parish-Ciudad-Alianza-car'))
+                ->addParish($this->getReference('Parish-Ciudad-Alianza-car'))
+                ->addParish($this->getReference('Parish-Guacara-car'))
+               
                 ;
                 $this->addReference("City-Guacara-ca-car", $city);
                 $manager->persist($city);            
                                 
-                
-        $city = new City();
-        $city
-                ->setDescription('Guacara')
-                ->setCapital(false)
-                ->setState($this->getReference('State-Carabobo'))
-                ->setMunicipality($this->getReference('Municipality-Guacara-car'))
-                ->setParish($this->getReference('Parish-Guacara-car'))
-                ;
-                $this->addReference("City-Guacara-car", $city);
-                $manager->persist($city);         
-                
                 
         $city = new City();
         $city
@@ -3340,24 +3077,17 @@ class LoadCityData extends AbstractFixture implements OrderedFixtureInterface
                 ->setCapital(false)
                 ->setState($this->getReference('State-Carabobo'))
                 ->setMunicipality($this->getReference('Municipality-Libertador-car'))
-                ->setParish($this->getReference('Parish-Tocuyito-car'))
+                ->addParish($this->getReference('Parish-Tocuyito-car'))
+                ->addParish($this->getReference('Parish-Independecia-car'))
+                
+               
                 ;
                 $this->addReference("City-Tocuyito-car", $city);
                 $manager->persist($city);          
                 
                 
                 
-        $city = new City();
-        $city
-                ->setDescription('Tocuyito')
-                ->setCapital(false)
-                ->setState($this->getReference('State-Carabobo'))
-                ->setMunicipality($this->getReference('Municipality-Libertador-car'))
-                ->setParish($this->getReference('Parish-Independecia-car'))
-                ;
-                $this->addReference("City-Tocuyito-in-car", $city);
-                $manager->persist($city);          
-                
+     
                         
         $city = new City();
         $city
@@ -3411,70 +3141,20 @@ class LoadCityData extends AbstractFixture implements OrderedFixtureInterface
                 ->setCapital(false)
                 ->setState($this->getReference('State-Carabobo'))
                 ->setMunicipality($this->getReference('Municipality-Puerto-Cabello-car'))
-                ->setParish($this->getReference('Parish-Bartolomé-Salom-car'))
+                ->addParish($this->getReference('Parish-Bartolomé-Salom-car'))
+                ->addParish($this->getReference('Parish-Democracia-car'))
+                ->addParish($this->getReference('Parish-Fraternidad-car'))
+                ->addParish($this->getReference('Parish-Goaigoaza-car'))
+                ->addParish($this->getReference('Parish-Juan-José-Flores-car'))
+                ->addParish($this->getReference('Parish-Unión-car'))
+               
                 ;
                 $this->addReference("City-Puerto-Cabello-bs-car", $city);
                 $manager->persist($city);            
-                
-                
-        $city = new City();
-        $city
-                ->setDescription('Puerto Cabello')
-                ->setCapital(false)
-                ->setState($this->getReference('State-Carabobo'))
-                ->setMunicipality($this->getReference('Municipality-Puerto-Cabello-car'))
-                ->setParish($this->getReference('Parish-Democracia-car'))
-                ;
-                $this->addReference("City-Puerto-Cabello-de-car", $city);
-                $manager->persist($city);          
-                
-                
-        $city = new City();
-        $city
-                ->setDescription('Puerto Cabello')
-                ->setCapital(false)
-                ->setState($this->getReference('State-Carabobo'))
-                ->setMunicipality($this->getReference('Municipality-Puerto-Cabello-car'))
-                ->setParish($this->getReference('Parish-Fraternidad-car'))
-                ;
-                $this->addReference("City-Puerto-Cabello-fr-car", $city);
-                $manager->persist($city);          
-                
-                
-        $city = new City();
-        $city
-                ->setDescription('Puerto Cabello')
-                ->setCapital(false)
-                ->setState($this->getReference('State-Carabobo'))
-                ->setMunicipality($this->getReference('Municipality-Puerto-Cabello-car'))
-                ->setParish($this->getReference('Parish-Goaigoaza-car'))
-                ;
-                $this->addReference("City-Puerto-Cabello-go-car", $city);
-                $manager->persist($city);          
-                
-                        
-        $city = new City();
-        $city
-                ->setDescription('Puerto Cabello')
-                ->setCapital(false)
-                ->setState($this->getReference('State-Carabobo'))
-                ->setMunicipality($this->getReference('Municipality-Puerto-Cabello-car'))
-                ->setParish($this->getReference('Parish-Juan-José-Flores-car'))
-                ;
-                $this->addReference("City-Puerto-Cabello-jf-car", $city);
-                $manager->persist($city);          
+               
                        
                 
-        $city = new City();
-        $city
-                ->setDescription('Puerto Cabello')
-                ->setCapital(false)
-                ->setState($this->getReference('State-Carabobo'))
-                ->setMunicipality($this->getReference('Municipality-Puerto-Cabello-car'))
-                ->setParish($this->getReference('Parish-Unión-car'))
-                ;
-                $this->addReference("City-Puerto-Cabello-un-car", $city);
-                $manager->persist($city);         
+              
                 
                 
         $city = new City();
@@ -3542,81 +3222,18 @@ class LoadCityData extends AbstractFixture implements OrderedFixtureInterface
                 ->setCapital(false)
                 ->setState($this->getReference('State-Carabobo'))
                 ->setMunicipality($this->getReference('Municipality-Valencia-car'))
-                ->setParish($this->getReference('Parish-Urbana-Catedral-car'))
+                ->addParish($this->getReference('Parish-Urbana-Catedral-car'))
+                ->addParish($this->getReference('Parish-El-Socorro-car'))
+                ->addParish($this->getReference('Parish-Miguel-Peña-car'))
+                ->addParish($this->getReference('Parish-Rafael-Urdaneta-car'))
+                ->addParish($this->getReference('Parish-San-Blas-car'))
+                ->addParish($this->getReference('Parish-San-José-car'))
+                ->addParish($this->getReference('Parish-Santa-Rosa-car'))
+                
                 ;
                 $this->addReference("City-Valencia-cat-car", $city);
                 $manager->persist($city);         
                                                 
-                
-        $city = new City();
-        $city
-                ->setDescription('Valencia')
-                ->setCapital(false)
-                ->setState($this->getReference('State-Carabobo'))
-                ->setMunicipality($this->getReference('Municipality-Valencia-car'))
-                ->setParish($this->getReference('Parish-El-Socorro-car'))
-                ;
-                $this->addReference("City-Valencia-es-car", $city);
-                $manager->persist($city);            
-                
-                
-        $city = new City();
-        $city
-                ->setDescription('Valencia')
-                ->setCapital(false)
-                ->setState($this->getReference('State-Carabobo'))
-                ->setMunicipality($this->getReference('Municipality-Valencia-car'))
-                ->setParish($this->getReference('Parish-Miguel-Peña-car'))
-                ;
-                $this->addReference("City-Valencia-mp-car", $city);
-                $manager->persist($city);            
-                
-                        
-        $city = new City();
-        $city
-                ->setDescription('Valencia')
-                ->setCapital(false)
-                ->setState($this->getReference('State-Carabobo'))
-                ->setMunicipality($this->getReference('Municipality-Valencia-car'))
-                ->setParish($this->getReference('Parish-Rafael-Urdaneta-car'))
-                ;
-                $this->addReference("City-Valencia-ru-car", $city);
-                $manager->persist($city);              
-                
-                
-        $city = new City();
-        $city
-                ->setDescription('Valencia')
-                ->setCapital(false)
-                ->setState($this->getReference('State-Carabobo'))
-                ->setMunicipality($this->getReference('Municipality-Valencia-car'))
-                ->setParish($this->getReference('Parish-San-Blas-car'))
-                ;
-                $this->addReference("City-Valencia-sb-car", $city);
-                $manager->persist($city);              
-                        
-                
-        $city = new City();
-        $city
-                ->setDescription('Valencia')
-                ->setCapital(false)
-                ->setState($this->getReference('State-Carabobo'))
-                ->setMunicipality($this->getReference('Municipality-Valencia-car'))
-                ->setParish($this->getReference('Parish-San-José-car'))
-                ;
-                $this->addReference("City-Valencia-sj-car", $city);
-                $manager->persist($city);             
-                
-        $city = new City();
-        $city
-                ->setDescription('Valencia')
-                ->setCapital(false)
-                ->setState($this->getReference('State-Carabobo'))
-                ->setMunicipality($this->getReference('Municipality-Valencia-car'))
-                ->setParish($this->getReference('Parish-Santa-Rosa-car'))
-                ;
-                $this->addReference("City-Valencia-sr-car", $city);
-                $manager->persist($city);             
                 
                 
         $city = new City();
@@ -4236,22 +3853,15 @@ class LoadCityData extends AbstractFixture implements OrderedFixtureInterface
                 ->setCapital(false)
                 ->setState($this->getReference('State-Falcon'))
                 ->setMunicipality($this->getReference('Municipality-Carirubana-fal'))
-                ->setParish($this->getReference('Parish-Carirubana-fal'))
+                ->addParish($this->getReference('Parish-Carirubana-fal'))
+                ->addParish($this->getReference('Parish-Norte-fal'))
+               
                 ;
                 $this->addReference("City-Punto-Fijo-fal", $city);
                 $manager->persist($city);           
                                         
                 
-        $city = new City();
-        $city
-                ->setDescription('Punto Fijo')
-                ->setCapital(false)
-                ->setState($this->getReference('State-Falcon'))
-                ->setMunicipality($this->getReference('Municipality-Carirubana-fal'))
-                ->setParish($this->getReference('Parish-Norte-fal'))
-                ;
-                $this->addReference("City-Punto-Fijo-no-fal", $city);
-                $manager->persist($city);          
+          
                 
                 
         $city = new City();
@@ -4675,35 +4285,18 @@ class LoadCityData extends AbstractFixture implements OrderedFixtureInterface
                 ->setCapital(false)
                 ->setState($this->getReference('State-Falcon'))
                 ->setMunicipality($this->getReference('Municipality-Miranda-fal'))
-                ->setParish($this->getReference('Parish-San-Antonio-fal'))
+                ->addParish($this->getReference('Parish-San-Antonio-fal'))
+                ->addParish($this->getReference('Parish-San-Gabriel-fal'))
+                ->addParish($this->getReference('Parish-Santa-Ana-mi-fal'))
+               
                 ;
                 $this->addReference("City-Santa-Ana-de-Coro-sa-fal", $city);
                 $manager->persist($city);                  
                 
                 
-        $city = new City();
-        $city
-                ->setDescription('Santa Ana de Coro')
-                ->setCapital(false)
-                ->setState($this->getReference('State-Falcon'))
-                ->setMunicipality($this->getReference('Municipality-Miranda-fal'))
-                ->setParish($this->getReference('Parish-San-Gabriel-fal'))
-                ;
-                $this->addReference("City-Santa-Ana-de-Coro-sg-fal", $city);
-                $manager->persist($city);            
+       
                 
-                
-        $city = new City();
-        $city
-                ->setDescription('Santa Ana de Coro')
-                ->setCapital(false)
-                ->setState($this->getReference('State-Falcon'))
-                ->setMunicipality($this->getReference('Municipality-Miranda-fal'))
-                ->setParish($this->getReference('Parish-Santa-Ana-mi-fal'))
-                ;
-                $this->addReference("City-Santa-Ana-de-Coro-san-fal", $city);
-                $manager->persist($city);          
-                
+      
                 
         $city = new City();
         $city
@@ -5573,83 +5166,21 @@ class LoadCityData extends AbstractFixture implements OrderedFixtureInterface
                 ->setCapital(false)
                 ->setState($this->getReference('State-Lara'))
                 ->setMunicipality($this->getReference('Municipality-Iribarren-lar'))
-                ->setParish($this->getReference('Parish-Catedral-lar'))
+                ->addParish($this->getReference('Parish-Catedral-lar'))
+                ->addParish($this->getReference('Parish-La-Concepción-lar'))
+                ->addParish($this->getReference('Parish-El-Cuji-lar'))
+                ->addParish($this->getReference('Parish-Juan-de-Villegas-lar'))
+                ->addParish($this->getReference('Parish-Santa-Rosa-lar'))
+                ->addParish($this->getReference('Parish-Tamaca-lar'))
+                ->addParish($this->getReference('Parish-Unión-lar'))
+                
+              
                 ;
                 $this->addReference("City-Barquisimeto-ct-lar", $city);
                 $manager->persist($city);          
                         
-                
-        $city = new City();
-        $city
-                ->setDescription('Barquisimeto')
-                ->setCapital(false)
-                ->setState($this->getReference('State-Lara'))
-                ->setMunicipality($this->getReference('Municipality-Iribarren-lar'))
-                ->setParish($this->getReference('Parish-La-Concepción-lar'))
-                ;
-                $this->addReference("City-Barquisimeto-lc-lar", $city);
-                $manager->persist($city);           
-                
-                
-        $city = new City();
-        $city
-                ->setDescription('Barquisimeto')
-                ->setCapital(false)
-                ->setState($this->getReference('State-Lara'))
-                ->setMunicipality($this->getReference('Municipality-Iribarren-lar'))
-                ->setParish($this->getReference('Parish-El-Cuji-lar'))
-                ;
-                $this->addReference("City-Barquisimeto-ec-lar", $city);
-                $manager->persist($city);          
-                
-                
-        $city = new City();
-        $city
-                ->setDescription('Barquisimeto')
-                ->setCapital(false)
-                ->setState($this->getReference('State-Lara'))
-                ->setMunicipality($this->getReference('Municipality-Iribarren-lar'))
-                ->setParish($this->getReference('Parish-Juan-de-Villegas-lar'))
-                ;
-                $this->addReference("City-Barquisimeto-jv-lar", $city);
-                $manager->persist($city);          
-                        
-                
-        $city = new City();
-        $city
-                ->setDescription('Barquisimeto')
-                ->setCapital(false)
-                ->setState($this->getReference('State-Lara'))
-                ->setMunicipality($this->getReference('Municipality-Iribarren-lar'))
-                ->setParish($this->getReference('Parish-Santa-Rosa-lar'))
-                ;
-                $this->addReference("City-Barquisimeto-st-lar", $city);
-                $manager->persist($city);          
-                
-                
-        $city = new City();
-        $city
-                ->setDescription('Barquisimeto')
-                ->setCapital(false)
-                ->setState($this->getReference('State-Lara'))
-                ->setMunicipality($this->getReference('Municipality-Iribarren-lar'))
-                ->setParish($this->getReference('Parish-Tamaca-lar'))
-                ;
-                $this->addReference("City-Barquisimeto-ta-lar", $city);
-                $manager->persist($city);          
-                        
-        $city = new City();
-        $city
-                ->setDescription('Barquisimeto')
-                ->setCapital(false)
-                ->setState($this->getReference('State-Lara'))
-                ->setMunicipality($this->getReference('Municipality-Iribarren-lar'))
-                ->setParish($this->getReference('Parish-Unión-lar'))
-                ;
-                $this->addReference("City-Barquisimeto-un-lar", $city);
-                $manager->persist($city);                 
-                
-                
+                    
+                               
         $city = new City();
         $city
                 ->setDescription('Bobare')
@@ -6210,32 +5741,14 @@ class LoadCityData extends AbstractFixture implements OrderedFixtureInterface
                 ->setCapital(false)
                 ->setState($this->getReference('State-Merida'))
                 ->setMunicipality($this->getReference('Municipality-Alberto-Adriani-mer'))
-                ->setParish($this->getReference('Parish-Presidente-Betancourt-mer'))
+                ->addParish($this->getReference('Parish-Presidente-Betancourt-mer'))
+                ->addParish($this->getReference('Parish-Presidente-Páez-mer'))
+                ->addParish($this->getReference('Parish-Presidente-Rómulo-Gallegos-mer'))
+              
                 ;
                 $this->addReference("City-El-Vigía-mer", $city);
                 $manager->persist($city);           
-                
-        $city = new City();
-        $city
-                ->setDescription('El Vigía')
-                ->setCapital(false)
-                ->setState($this->getReference('State-Merida'))
-                ->setMunicipality($this->getReference('Municipality-Alberto-Adriani-mer'))
-                ->setParish($this->getReference('Parish-Presidente-Páez-mer'))
-                ;
-                $this->addReference("City-El-Vigía-pp-mer", $city);
-                $manager->persist($city);           
-                        
-        $city = new City();
-        $city
-                ->setDescription('El Vigía')
-                ->setCapital(false)
-                ->setState($this->getReference('State-Merida'))
-                ->setMunicipality($this->getReference('Municipality-Alberto-Adriani-mer'))
-                ->setParish($this->getReference('Parish-Presidente-Rómulo-Gallegos-mer'))
-                ;
-                $this->addReference("City-El-Vigía-pr-mer", $city);
-                $manager->persist($city);           
+         
                                 
                 
         $city = new City();
@@ -6458,22 +5971,15 @@ class LoadCityData extends AbstractFixture implements OrderedFixtureInterface
                 ->setCapital(false)
                 ->setState($this->getReference('State-Merida'))
                 ->setMunicipality($this->getReference('Municipality-Campo-Elias-mer'))
-                ->setParish($this->getReference('Parish-Matriz-mer'))
+                ->addParish($this->getReference('Parish-Matriz-mer'))
+                ->addParish($this->getReference('Parish-Montalbán-mer'))
+                
                 ;
                 $this->addReference("City-Ejido-mt-mer", $city);
                 $manager->persist($city);                               
                         
                 
-        $city = new City();
-        $city
-                ->setDescription('Ejido')
-                ->setCapital(false)
-                ->setState($this->getReference('State-Merida'))
-                ->setMunicipality($this->getReference('Municipality-Campo-Elias-mer'))
-                ->setParish($this->getReference('Parish-Montalbán-mer'))
-                ;
-                $this->addReference("City-Ejido-mb-mer", $city);
-                $manager->persist($city);          
+  
                 
                 
         $city = new City();
@@ -6659,146 +6165,25 @@ class LoadCityData extends AbstractFixture implements OrderedFixtureInterface
                 ->setCapital(false)
                 ->setState($this->getReference('State-Merida'))
                 ->setMunicipality($this->getReference('Municipality-Libertador-mer'))
-                ->setParish($this->getReference('Parish-Antonio-Spinetti-Dini-mer'))
+                ->addParish($this->getReference('Parish-Antonio-Spinetti-Dini-mer'))
+                ->addParish($this->getReference('Parish-Arias-mer'))
+                ->addParish($this->getReference('Parish-Caracciolo-Parra-Pérez-mer'))
+                ->addParish($this->getReference('Parish-Domingo-Peña-mer'))
+                ->addParish($this->getReference('Parish-El-Llano-mer'))
+                ->addParish($this->getReference('Parish-Gonzalo-Picón-Febres-mer'))
+                ->addParish($this->getReference('Parish-Jacinto-Plaza-mer'))
+                ->addParish($this->getReference('Parish-Juan-Rodríguez-Suárez-mer'))
+                ->addParish($this->getReference('Parish-Lasso-de-la-Vega-mer'))
+                ->addParish($this->getReference('Parish-Mariano-Picón-Salas-mer'))
+                ->addParish($this->getReference('Parish-Milla-mer'))
+                ->addParish($this->getReference('Parish-Osuna-Rodríguez-mer'))
+                ->addParish($this->getReference('Parish-Sagrario-mer'))
+               
                 ;
                 $this->addReference("City-Mérida-as-mer", $city);
                 $manager->persist($city);                 
-                        
-                
-         
-        $city = new City();
-        $city
-                ->setDescription('Mérida')
-                ->setCapital(false)
-                ->setState($this->getReference('State-Merida'))
-                ->setMunicipality($this->getReference('Municipality-Libertador-mer'))
-                ->setParish($this->getReference('Parish-Arias-mer'))
-                ;
-                $this->addReference("City-Mérida-ar-mer", $city);
-                $manager->persist($city);                 
-                                
-        $city = new City();
-        $city
-                ->setDescription('Mérida')
-                ->setCapital(false)
-                ->setState($this->getReference('State-Merida'))
-                ->setMunicipality($this->getReference('Municipality-Libertador-mer'))
-                ->setParish($this->getReference('Parish-Caracciolo-Parra-Pérez-mer'))
-                ;
-                $this->addReference("City-Mérida-cp-mer", $city);
-                $manager->persist($city);         
-                
-        $city = new City();
-        $city
-                ->setDescription('Mérida')
-                ->setCapital(false)
-                ->setState($this->getReference('State-Merida'))
-                ->setMunicipality($this->getReference('Municipality-Libertador-mer'))
-                ->setParish($this->getReference('Parish-Domingo-Peña-mer'))
-                ;
-                $this->addReference("City-Mérida-dp-mer", $city);
-                $manager->persist($city);         
-                        
-                
-        $city = new City();
-        $city
-                ->setDescription('Mérida')
-                ->setCapital(false)
-                ->setState($this->getReference('State-Merida'))
-                ->setMunicipality($this->getReference('Municipality-Libertador-mer'))
-                ->setParish($this->getReference('Parish-El-Llano-mer'))
-                ;
-                $this->addReference("City-Mérida-ll-mer", $city);
-                $manager->persist($city);         
-                               
-        $city = new City();
-        $city
-                ->setDescription('Mérida')
-                ->setCapital(false)
-                ->setState($this->getReference('State-Merida'))
-                ->setMunicipality($this->getReference('Municipality-Libertador-mer'))
-                ->setParish($this->getReference('Parish-Gonzalo-Picón-Febres-mer'))
-                ;
-                $this->addReference("City-Mérida-gp-mer", $city);
-                $manager->persist($city);                
-                
-        $city = new City();
-        $city
-                ->setDescription('Mérida')
-                ->setCapital(false)
-                ->setState($this->getReference('State-Merida'))
-                ->setMunicipality($this->getReference('Municipality-Libertador-mer'))
-                ->setParish($this->getReference('Parish-Jacinto-Plaza-mer'))
-                ;
-                $this->addReference("City-Mérida-jp-mer", $city);
-                $manager->persist($city);           
-                
-        $city = new City();
-        $city
-                ->setDescription('Mérida')
-                ->setCapital(false)
-                ->setState($this->getReference('State-Merida'))
-                ->setMunicipality($this->getReference('Municipality-Libertador-mer'))
-                ->setParish($this->getReference('Parish-Juan-Rodríguez-Suárez-mer'))
-                ;
-                $this->addReference("City-Mérida-jr-mer", $city);
-                $manager->persist($city);         
-                
-                
-        $city = new City();
-        $city
-                ->setDescription('Mérida')
-                ->setCapital(false)
-                ->setState($this->getReference('State-Merida'))
-                ->setMunicipality($this->getReference('Municipality-Libertador-mer'))
-                ->setParish($this->getReference('Parish-Lasso-de-la-Vega-mer'))
-                ;
-                $this->addReference("City-Mérida-lv-mer", $city);
-                $manager->persist($city);              
-                
-        $city = new City();
-        $city
-                ->setDescription('Mérida')
-                ->setCapital(false)
-                ->setState($this->getReference('State-Merida'))
-                ->setMunicipality($this->getReference('Municipality-Libertador-mer'))
-                ->setParish($this->getReference('Parish-Mariano-Picón-Salas-mer'))
-                ;
-                $this->addReference("City-Mérida-mp-mer", $city);
-                $manager->persist($city);          
-                
-        $city = new City();
-        $city
-                ->setDescription('Mérida')
-                ->setCapital(false)
-                ->setState($this->getReference('State-Merida'))
-                ->setMunicipality($this->getReference('Municipality-Libertador-mer'))
-                ->setParish($this->getReference('Parish-Milla-mer'))
-                ;
-                $this->addReference("City-Mérida-mi-mer", $city);
-                $manager->persist($city);           
-                
-        $city = new City();
-        $city
-                ->setDescription('Mérida')
-                ->setCapital(false)
-                ->setState($this->getReference('State-Merida'))
-                ->setMunicipality($this->getReference('Municipality-Libertador-mer'))
-                ->setParish($this->getReference('Parish-Osuna-Rodríguez-mer'))
-                ;
-                $this->addReference("City-Mérida-or-mer", $city);
-                $manager->persist($city);                
-                
-        $city = new City();
-        $city
-                ->setDescription('Mérida')
-                ->setCapital(false)
-                ->setState($this->getReference('State-Merida'))
-                ->setMunicipality($this->getReference('Municipality-Libertador-mer'))
-                ->setParish($this->getReference('Parish-Sagrario-mer'))
-                ;
-                $this->addReference("City-Mérida-sa-mer", $city);
-                $manager->persist($city);             
+            
+      
                 
         $city = new City();
         $city
@@ -8034,66 +7419,20 @@ class LoadCityData extends AbstractFixture implements OrderedFixtureInterface
                 ->setDescription('Maturín')
                 ->setCapital(false)
                 ->setState($this->getReference('State-Monagas'))
-               ->setMunicipality($this->getReference('Municipality-Maturin-mon'))
-               ->setParish($this->getReference('Parish-Maturin-mon'))
+                ->setMunicipality($this->getReference('Municipality-Maturin-mon'))
+                ->addParish($this->getReference('Parish-Maturin-mon'))
+                ->addParish($this->getReference('Parish-Alto-de-Los-Godos-mon'))
+                ->addParish($this->getReference('Parish-Boquerón-mon'))
+                ->addParish($this->getReference('Parish-Las-Cocuizas-mon'))
+                ->addParish($this->getReference('Parish-San-Simón-mon'))
+                ->addParish($this->getReference('Parish-Santa-Cruz-mon'))
+                
+               
                 ;
                 $this->addReference("City-Maturín-mon", $city);
                 $manager->persist($city);            
                                         
-        $city = new City();
-        $city
-                ->setDescription('Maturín')
-                ->setCapital(false)
-                ->setState($this->getReference('State-Monagas'))
-               ->setMunicipality($this->getReference('Municipality-Maturin-mon'))
-               ->setParish($this->getReference('Parish-Alto-de-Los-Godos-mon'))
-                ;
-                $this->addReference("City-Maturín-ag-mon", $city);
-                $manager->persist($city);          
-                
-        $city = new City();
-        $city
-                ->setDescription('Maturín')
-                ->setCapital(false)
-                ->setState($this->getReference('State-Monagas'))
-               ->setMunicipality($this->getReference('Municipality-Maturin-mon'))
-               ->setParish($this->getReference('Parish-Boquerón-mon'))
-                ;
-                $this->addReference("City-Maturín-bq-mon", $city);
-                $manager->persist($city);          
-                        
-        $city = new City();
-        $city
-                ->setDescription('Maturín')
-                ->setCapital(false)
-                ->setState($this->getReference('State-Monagas'))
-               ->setMunicipality($this->getReference('Municipality-Maturin-mon'))
-               ->setParish($this->getReference('Parish-Las-Cocuizas-mon'))
-                ;
-                $this->addReference("City-Maturín-lc-mon", $city);
-                $manager->persist($city);          
-                                
-        $city = new City();
-        $city
-                ->setDescription('Maturín')
-                ->setCapital(false)
-                ->setState($this->getReference('State-Monagas'))
-               ->setMunicipality($this->getReference('Municipality-Maturin-mon'))
-               ->setParish($this->getReference('Parish-San-Simón-mon'))
-                ;
-                $this->addReference("City-Maturín-ss-mon", $city);
-                $manager->persist($city);          
-                                        
-        $city = new City();
-        $city
-                ->setDescription('Maturín')
-                ->setCapital(false)
-                ->setState($this->getReference('State-Monagas'))
-               ->setMunicipality($this->getReference('Municipality-Maturin-mon'))
-               ->setParish($this->getReference('Parish-Santa-Cruz-mon'))
-                ;
-                $this->addReference("City-Maturín-sc-mon", $city);
-                $manager->persist($city);          
+          
                 
         $city = new City();
         $city
@@ -9205,33 +8544,15 @@ class LoadCityData extends AbstractFixture implements OrderedFixtureInterface
                 ->setCapital(false)
                 ->setState($this->getReference('State-Sucre'))
                ->setMunicipality($this->getReference('Municipality-Bermudez-suc'))
-                ->setParish($this->getReference('Parish-Santa-Catalina-suc'))
+                ->addParish($this->getReference('Parish-Santa-Catalina-suc'))
+                ->addParish($this->getReference('Parish-Santa-Rosa-suc'))
+                ->addParish($this->getReference('Parish-Santa-Teresa-suc'))
+                
                 ;
                 $this->addReference("City-Carúpano-sc-suc", $city);
                 $manager->persist($city);         
-                        
-        $city = new City();
-        $city
-                ->setDescription('Carúpano')
-                ->setCapital(false)
-                ->setState($this->getReference('State-Sucre'))
-               ->setMunicipality($this->getReference('Municipality-Bermudez-suc'))
-                ->setParish($this->getReference('Parish-Santa-Rosa-suc'))
-                ;
-                $this->addReference("City-Carúpano-sr-suc", $city);
-                $manager->persist($city);         
-                                
-        $city = new City();
-        $city
-                ->setDescription('Carúpano')
-                ->setCapital(false)
-                ->setState($this->getReference('State-Sucre'))
-               ->setMunicipality($this->getReference('Municipality-Bermudez-suc'))
-                ->setParish($this->getReference('Parish-Santa-Teresa-suc'))
-                ;
-                $this->addReference("City-Carúpano-st-suc", $city);
-                $manager->persist($city);          
-                
+      
+        
         $city = new City();
         $city
                 ->setDescription('Marigüitar')
@@ -9531,33 +8852,15 @@ class LoadCityData extends AbstractFixture implements OrderedFixtureInterface
                 ->setCapital(false)
                 ->setState($this->getReference('State-Sucre'))
                ->setMunicipality($this->getReference('Municipality-Sucre-suc'))
-                ->setParish($this->getReference('Parish-Altagracia-suc'))
+                ->addParish($this->getReference('Parish-Altagracia-suc'))
+                ->addParish($this->getReference('Parish-Ayacucho-suc'))
+                ->addParish($this->getReference('Parish-Santa-Inés-suc'))
+                
                 ;
                 $this->addReference("City-Cumaná-alt-suc", $city);
                 $manager->persist($city);                  
                 
-        $city = new City();
-        $city
-                ->setDescription('Cumaná')
-                ->setCapital(false)
-                ->setState($this->getReference('State-Sucre'))
-               ->setMunicipality($this->getReference('Municipality-Sucre-suc'))
-                ->setParish($this->getReference('Parish-Ayacucho-suc'))
-                ;
-                $this->addReference("City-Cumaná-aya-suc", $city);
-                $manager->persist($city);                  
-                        
-        $city = new City();
-        $city
-                ->setDescription('Cumaná')
-                ->setCapital(false)
-                ->setState($this->getReference('State-Sucre'))
-               ->setMunicipality($this->getReference('Municipality-Sucre-suc'))
-                ->setParish($this->getReference('Parish-Santa-Inés-suc'))
-                ;
-                $this->addReference("City-Cumaná-si-suc", $city);
-                $manager->persist($city);           
-                
+             
         $city = new City();
         $city
                 ->setDescription('Caigüire')
@@ -10225,44 +9528,16 @@ class LoadCityData extends AbstractFixture implements OrderedFixtureInterface
                 ->setCapital(false)
                 ->setState($this->getReference('State-Tachira'))
                 ->setMunicipality($this->getReference('Municipality-San-Cristobal-tac'))
-                ->setParish($this->getReference('Parish-La-Concordia-tac'))
+                ->addParish($this->getReference('Parish-La-Concordia-tac'))
+                ->addParish($this->getReference('Parish-Pedro-María-Morantes-tac'))
+                ->addParish($this->getReference('Parish-San-Juan-Bautista-tac'))
+                ->addParish($this->getReference('Parish-San-Sebastián-tac'))
+                
                 ;
                 $this->addReference("City-San-Cristóbal-tac", $city);
                 $manager->persist($city);            
                         
-        $city = new City();
-        $city
-                ->setDescription('San Cristóbal')
-                ->setCapital(false)
-                ->setState($this->getReference('State-Tachira'))
-                ->setMunicipality($this->getReference('Municipality-San-Cristobal-tac'))
-                ->setParish($this->getReference('Parish-Pedro-María-Morantes-tac'))
-                ;
-                $this->addReference("City-San-Cristóbal-pmm-tac", $city);
-                $manager->persist($city);          
-                
-        $city = new City();
-        $city
-                ->setDescription('San Cristóbal')
-                ->setCapital(false)
-                ->setState($this->getReference('State-Tachira'))
-                ->setMunicipality($this->getReference('Municipality-San-Cristobal-tac'))
-                ->setParish($this->getReference('Parish-San-Juan-Bautista-tac'))
-                ;
-                $this->addReference("City-San-Cristóbal-sjb-tac", $city);
-                $manager->persist($city);          
-                        
-        $city = new City();
-        $city
-                ->setDescription('San Cristóbal')
-                ->setCapital(false)
-                ->setState($this->getReference('State-Tachira'))
-                ->setMunicipality($this->getReference('Municipality-San-Cristobal-tac'))
-                ->setParish($this->getReference('Parish-San-Sebastián-tac'))
-                ;
-                $this->addReference("City-San-Cristóbal-ss-tac", $city);
-                $manager->persist($city);          
-                        
+               
                 
         $city = new City();
         $city
@@ -11356,7 +10631,17 @@ class LoadCityData extends AbstractFixture implements OrderedFixtureInterface
                 ->setParish($this->getReference('Parish-Tres-Esquinas-tru'))
                 ;
                 $this->addReference("City-Tres-Esquinas-tru", $city);
-                $manager->persist($city);            
+                $manager->persist($city);
+                $city = new City();
+        $city
+                ->setDescription('Trujillo')
+                ->setCapital(false)
+                ->setState($this->getReference('State-Trujillo'))
+                ->setMunicipality($this->getReference('Municipality-Trujillo-tru'))
+                ->setParish($this->getReference('Parish-Tres-Esquinas-tru'))
+                ;
+                $this->addReference("City-trujillo-tru", $city);
+                $manager->persist($city);  
                 
                 
         $city = new City();
@@ -12301,23 +11586,16 @@ class LoadCityData extends AbstractFixture implements OrderedFixtureInterface
                 ->setCapital(false)
                 ->setState($this->getReference('State-Zulia'))
                 ->setMunicipality($this->getReference('Municipality-Lagunillas-zul'))
-                ->setParish($this->getReference('Parish-Alonso-de-Ojeda-zul'))
+                ->addParish($this->getReference('Parish-Alonso-de-Ojeda-zul'))
+                ->addParish($this->getReference('Parish-Libertad-zul'))
+                ->addParish($this->getReference('Parish-El-Danto-zul'))
+             
                 ;
                 $this->addReference("City-Ciudad-Ojeda-zul", $city);
                 $manager->persist($city);           
                 
                 
-        $city = new City();
-        $city
-                ->setDescription('Ciudad Ojeda')
-                ->setCapital(false)
-                ->setState($this->getReference('State-Zulia'))
-                ->setMunicipality($this->getReference('Municipality-Lagunillas-zul'))
-                ->setParish($this->getReference('Parish-Libertad-zul'))
-                ;
-                $this->addReference("City-Ciudad-Ojeda-li-zul", $city);
-                $manager->persist($city);           
-                       
+       
                 
         $city = new City();
         $city
@@ -12355,16 +11633,7 @@ class LoadCityData extends AbstractFixture implements OrderedFixtureInterface
                 $manager->persist($city);          
                                 
                 
-        $city = new City();
-        $city
-                ->setDescription('Ciudad Ojeda')
-                ->setCapital(false)
-                ->setState($this->getReference('State-Zulia'))
-                ->setMunicipality($this->getReference('Municipality-Lagunillas-zul'))
-                ->setParish($this->getReference('Parish-El-Danto-zul'))
-                ;
-                $this->addReference("City-Ciudad-Ojeda-ed-zul", $city);
-                $manager->persist($city);          
+           
                                        
         $city = new City();
         $city
@@ -12503,173 +11772,25 @@ class LoadCityData extends AbstractFixture implements OrderedFixtureInterface
                 ->addParish($this->getReference('Parish-Bolívar-zul'))
                 ->addParish($this->getReference('Parish-Cacique-Mara-zul'))
                 ->addParish($this->getReference('Parish-Carracciolo-Parra-Pérez-zul'))
+                ->addParish($this->getReference('Parish-Cecilio-Acosta-zul'))
+                ->addParish($this->getReference('Parish-Cristo-de-Aranza-zul'))
+                ->addParish($this->getReference('Parish-Coquivacoa-zul'))
+                ->addParish($this->getReference('Parish-Chiquinquirá-mar-zul'))
+                ->addParish($this->getReference('Parish-Francisco-Eugenio-Bustamante-zul'))
+                ->addParish($this->getReference('Parish-Idelfonso-Vásquez-zul'))
+                ->addParish($this->getReference('Parish-Juana-de-Ávila-zul'))
+                ->addParish($this->getReference('Parish-Luis-Hurtado-Higuera-zul'))
+                ->addParish($this->getReference('Parish-Manuel-Dagnino-zul'))
+                ->addParish($this->getReference('Parish-Olegario-Villalobos-zul'))
+                ->addParish($this->getReference('Parish-Raúl-Leoni-zul'))
+                ->addParish($this->getReference('Parish-Santa-Lucía-zul'))
+                ->addParish($this->getReference('Parish-Venancio-Pulgar-zul'))
+                ->addParish($this->getReference('Parish-San-Isidro-zul'))
+                
                 ;
                 $this->addReference("City-Maracaibo-ab-zul", $city);
                 $manager->persist($city);           
-                        
-        $city = new City();
-        $city
-                ->setDescription('Maracaibo')
-                ->setCapital(false)
-                ->setState($this->getReference('State-Zulia'))
-                ->setMunicipality($this->getReference('Municipality-Maracaibo-zul'))
-                ->setParish($this->getReference('Parish-Cecilio-Acosta-zul'))
-                ;
-                $this->addReference("City-Maracaibo-ca-zul", $city);
-                $manager->persist($city);           
-                
-                
-        $city = new City();
-        $city
-                ->setDescription('Maracaibo')
-                ->setCapital(false)
-                ->setState($this->getReference('State-Zulia'))
-                ->setMunicipality($this->getReference('Municipality-Maracaibo-zul'))
-                ->setParish($this->getReference('Parish-Cristo-de-Aranza-zul'))
-                ;
-                $this->addReference("City-Maracaibo-cda-zul", $city);
-                $manager->persist($city);           
-                
-                        
-        $city = new City();
-        $city
-                ->setDescription('Maracaibo')
-                ->setCapital(false)
-                ->setState($this->getReference('State-Zulia'))
-                ->setMunicipality($this->getReference('Municipality-Maracaibo-zul'))
-                ->setParish($this->getReference('Parish-Coquivacoa-zul'))
-                ;
-                $this->addReference("City-Maracaibo-coq-zul", $city);
-                $manager->persist($city);           
-                        
-                
-        $city = new City();
-        $city
-                ->setDescription('Maracaibo')
-                ->setCapital(false)
-                ->setState($this->getReference('State-Zulia'))
-                ->setMunicipality($this->getReference('Municipality-Maracaibo-zul'))
-                ->setParish($this->getReference('Parish-Chiquinquirá-mar-zul'))
-                ;
-                $this->addReference("City-Maracaibo-chi-zul", $city);
-                $manager->persist($city);           
-                        
-                        
-        $city = new City();
-        $city
-                ->setDescription('Maracaibo')
-                ->setCapital(false)
-                ->setState($this->getReference('State-Zulia'))
-                ->setMunicipality($this->getReference('Municipality-Maracaibo-zul'))
-                ->setParish($this->getReference('Parish-Francisco-Eugenio-Bustamante-zul'))
-                ;
-                $this->addReference("City-Maracaibo-feb-zul", $city);
-                $manager->persist($city);           
-                                
-                
-        $city = new City();
-        $city
-                ->setDescription('Maracaibo')
-                ->setCapital(false)
-                ->setState($this->getReference('State-Zulia'))
-                ->setMunicipality($this->getReference('Municipality-Maracaibo-zul'))
-                ->setParish($this->getReference('Parish-Idelfonso-Vásquez-zul'))
-                ;
-                $this->addReference("City-Maracaibo-iv-zul", $city);
-                $manager->persist($city);           
-                                
-                
-        $city = new City();
-        $city
-                ->setDescription('Maracaibo')
-                ->setCapital(false)
-                ->setState($this->getReference('State-Zulia'))
-                ->setMunicipality($this->getReference('Municipality-Maracaibo-zul'))
-                ->setParish($this->getReference('Parish-Juana-de-Ávila-zul'))
-                ;
-                $this->addReference("City-Maracaibo-ja-zul", $city);
-                $manager->persist($city);           
-                                              
-        $city = new City();
-        $city
-                ->setDescription('Maracaibo')
-                ->setCapital(false)
-                ->setState($this->getReference('State-Zulia'))
-                ->setMunicipality($this->getReference('Municipality-Maracaibo-zul'))
-                ->setParish($this->getReference('Parish-Luis-Hurtado-Higuera-zul'))
-                ;
-                $this->addReference("City-Maracaibo-lhh-zul", $city);
-                $manager->persist($city);         
-                
-                
-        $city = new City();
-        $city
-                ->setDescription('Maracaibo')
-                ->setCapital(false)
-                ->setState($this->getReference('State-Zulia'))
-                ->setMunicipality($this->getReference('Municipality-Maracaibo-zul'))
-                ->setParish($this->getReference('Parish-Manuel-Dagnino-zul'))
-                ;
-                $this->addReference("City-Maracaibo-pm-zul", $city);
-                $manager->persist($city);            
-                
-                
-        $city = new City();
-        $city
-                ->setDescription('Maracaibo')
-                ->setCapital(false)
-                ->setState($this->getReference('State-Zulia'))
-                ->setMunicipality($this->getReference('Municipality-Maracaibo-zul'))
-                ->setParish($this->getReference('Parish-Olegario-Villalobos-zul'))
-                ;
-                $this->addReference("City-Maracaibo-ov-zul", $city);
-                $manager->persist($city);           
-                
-        $city = new City();
-        $city
-                ->setDescription('Maracaibo')
-                ->setCapital(false)
-                ->setState($this->getReference('State-Zulia'))
-                ->setMunicipality($this->getReference('Municipality-Maracaibo-zul'))
-                ->setParish($this->getReference('Parish-Raúl-Leoni-zul'))
-                ;
-                $this->addReference("City-Maracaibo-rl-zul", $city);
-                $manager->persist($city);          
-                
-        $city = new City();
-        $city
-                ->setDescription('Maracaibo')
-                ->setCapital(false)
-                ->setState($this->getReference('State-Zulia'))
-                ->setMunicipality($this->getReference('Municipality-Maracaibo-zul'))
-                ->setParish($this->getReference('Parish-Santa-Lucía-zul'))
-                ;
-                $this->addReference("City-Maracaibo-sl-zul", $city);
-                $manager->persist($city);          
-                        
-                
-        $city = new City();
-        $city
-                ->setDescription('Maracaibo')
-                ->setCapital(false)
-                ->setState($this->getReference('State-Zulia'))
-                ->setMunicipality($this->getReference('Municipality-Maracaibo-zul'))
-                ->setParish($this->getReference('Parish-Venancio-Pulgar-zul'))
-                ;
-                $this->addReference("City-Maracaibo-vp-zul", $city);
-                $manager->persist($city);         
-                
-        $city = new City();
-        $city
-                ->setDescription('Maracaibo')
-                ->setCapital(false)
-                ->setState($this->getReference('State-Zulia'))
-                ->setMunicipality($this->getReference('Municipality-Maracaibo-zul'))
-                ->setParish($this->getReference('Parish-San-Isidro-zul'))
-                ;
-                $this->addReference("City-Maracaibo-si-zul", $city);
-                $manager->persist($city);           
-                
+             
                 
         $city = new City();
         $city
@@ -13079,23 +12200,14 @@ class LoadCityData extends AbstractFixture implements OrderedFixtureInterface
                 ->setCapital(false)
                 ->setState($this->getReference('State-Zulia'))
                 ->setMunicipality($this->getReference('Municipality-Valmore Rodriguez-zul'))
-                ->setParish($this->getReference('Parish-La-Victoria-zul'))
+                ->addParish($this->getReference('Parish-La-Victoria-zul'))
+                ->addParish($this->getReference('Parish-Rafael-Urdaneta-zul'))
+             
                 ;
                 $this->addReference("City-Bachaquero-zul", $city);
                 $manager->persist($city);                  
                 
-                
-        $city = new City();
-        $city
-                ->setDescription('Bachaquero')
-                ->setCapital(false)
-                ->setState($this->getReference('State-Zulia'))
-                ->setMunicipality($this->getReference('Municipality-Valmore Rodriguez-zul'))
-                ->setParish($this->getReference('Parish-Rafael-Urdaneta-zul'))
-                ;
-                $this->addReference("City-Bachaquero-ru-zul", $city);
-                $manager->persist($city);         
-                
+             
                 
          $city = new City();
         $city
