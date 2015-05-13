@@ -1422,9 +1422,6 @@ class LoadCityData extends AbstractFixture implements OrderedFixtureInterface
                 ->addParish($this->getReference('Parish-José-Casanova-Godoy-ara'))
                 ->addParish($this->getReference('Parish-Andrés-Eloy-Blanco-ara'))
                 ->addParish($this->getReference('Parish-Los-Tacariguas-ara'))
-                ->addParish($this->getReference('Parish-Los-Tacariguas-ara'))
-         
-               
                 ;
                 $this->addReference("City-Maracay-ld-ara", $city);
                 $manager->persist($city);           
@@ -11291,7 +11288,6 @@ class LoadCityData extends AbstractFixture implements OrderedFixtureInterface
                 ->addParish($this->getReference('Parish-La-Rosa-zul'))
                 ->addParish($this->getReference('Parish-Jorge-Hernández-zul'))
                 ->addParish($this->getReference('Parish-Rómulo-Betancourt-zul'))
-                ->addParish($this->getReference('Parish-San-Benito-zul'))
                 ->addParish($this->getReference('Parish-San-Benito-zul'))
                 ;
                 $this->addReference("City-Cabimas-am-zul", $city);
