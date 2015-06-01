@@ -287,13 +287,6 @@ class LoadMunicipalityData extends AbstractFixture implements OrderedFixtureInte
         
         $municipality = new Municipality();
         $municipality
-                ->setDescription('Jose Gregorio Monagas')
-                ->setState($this->getReference("State-Aragua"));
-                $this->addReference('Municipality-Jose-Gregorio-Monagas-ara', $municipality);
-        $manager->persist($municipality);
-        
-        $municipality = new Municipality();
-        $municipality
                 ->setDescription('Girardot')
                 ->setState($this->getReference("State-Aragua"));
                 $this->addReference('Municipality-Girardot-ara', $municipality);
@@ -1161,13 +1154,6 @@ class LoadMunicipalityData extends AbstractFixture implements OrderedFixtureInte
                 ->setDescription('Campo Elias')
                 ->setState($this->getReference("State-Merida"));
                 $this->addReference('Municipality-Campo-Elias-mer', $municipality); 
-        $manager->persist($municipality);
-        
-        $municipality = new Municipality();
-        $municipality
-                ->setDescription('Jose Felix Ribas')
-                ->setState($this->getReference("State-Merida"));
-                $this->addReference('Municipality-Jose-Felix-Ribas-mer', $municipality); 
         $manager->persist($municipality);
         
         $municipality = new Municipality();
